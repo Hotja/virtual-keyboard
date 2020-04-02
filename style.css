@@ -1,0 +1,31 @@
+html {
+    max-width: 1920px;
+}
+body {
+    width: 100%;
+}
+#textarea {
+    display: flex;
+    float: none;
+    width: 98%;
+    height: 300px;
+    border: 2px solid gray;
+}
+.keys {
+    display: flex;
+    float: left;
+    flex-wrap: wrap;
+    width: 5.5%;
+    height: 50px;
+    border: 1px solid black;
+    margin: 3px;
+    padding: 3px;
+}
+.nextrow {
+    display: block;
+    width: 100%;
+    clear: both;
+}
+.active {
+    background-color: darkslategrey;
+}
