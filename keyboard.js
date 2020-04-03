@@ -24,9 +24,21 @@ document.onkeydown = function (event) {
     });
     document.querySelector('body .keys[data = "'+event.key+'"]').classList.add('active');
     if (event.key == "Tab") document.getElementById('textarea').value += "    ";
-    /*if (event.key == "ArrowLeft") document.getElementById('textarea').setSelectionRange(0, 0);*/
+    if (event.key == "Backspace") document.getElementById('textarea').value = document.getElementById('textarea').value.slice(0, -1);
+    else document.getElementById('textarea').value += event.key;
 
-    document.getElementById('textarea').value += event.key;
+/*    if (event.key == "Delete") {};
+    if (event.key == "CapsLock") {};
+    if (event.key == "Enter") {};
+    if (event.key == "Shift") {};
+    if (event.key == "Control") {};
+    if (event.key == "Alt") {};
+    if (event.key == "Meta") {};
+    if (event.key == "ArrowLeft") {};
+    if (event.key == "ArrowRight") {};
+    if (event.key == "ArrowUp") {};
+    if (event.key == "ArrowDown") {};
+    */
 }
 
 document.querySelectorAll('body .keys').forEach(function(elem){
